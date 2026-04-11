@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import { profile } from "../data/resume";
+import { GithubIcon, LinkedinIcon, MailIcon } from "./Icons";
+
+const linkedinHandle = profile.linkedin.replace(/^https?:\/\/(www\.)?/, "");
+const githubHandle = profile.github.replace(/^https?:\/\/(www\.)?/, "");
 
 export default function Hero() {
   return (
@@ -76,24 +80,27 @@ export default function Hero() {
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="hover:text-cyan-300 transition-colors"
+            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors"
           >
-            github.com/RobertMar77
+            <GithubIcon className="shrink-0" width={14} height={14} />
+            {githubHandle}
           </a>
           <span className="h-4 w-px bg-slate-700" />
           <a
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="hover:text-cyan-300 transition-colors"
+            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors break-all"
           >
-            LinkedIn
+            <LinkedinIcon className="shrink-0" width={14} height={14} />
+            {linkedinHandle}
           </a>
           <span className="h-4 w-px bg-slate-700" />
           <a
             href={`mailto:${profile.email}`}
-            className="hover:text-cyan-300 transition-colors"
+            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors"
           >
+            <MailIcon className="shrink-0" width={14} height={14} />
             {profile.email}
           </a>
         </div>

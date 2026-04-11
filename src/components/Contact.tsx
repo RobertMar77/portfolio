@@ -2,6 +2,10 @@ import { useState } from "react";
 import Section from "./Section";
 import { api, DEMO_MODE } from "../api/client";
 import { profile } from "../data/resume";
+import { GithubIcon, LinkedinIcon, MailIcon } from "./Icons";
+
+const linkedinHandle = profile.linkedin.replace(/^https?:\/\/(www\.)?/, "");
+const githubHandle = profile.github.replace(/^https?:\/\/(www\.)?/, "");
 
 type Status =
   | { kind: "idle" }
@@ -47,17 +51,17 @@ export default function Contact() {
               href={`mailto:${profile.email}`}
               className="flex items-center gap-3 text-slate-300 hover:text-cyan-300 transition-colors"
             >
-              <span className="text-cyan-400">✉</span>
+              <MailIcon className="text-cyan-400 shrink-0" />
               {profile.email}
             </a>
             <a
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-3 text-slate-300 hover:text-cyan-300 transition-colors"
+              className="flex items-center gap-3 text-slate-300 hover:text-cyan-300 transition-colors break-all"
             >
-              <span className="text-cyan-400">in</span>
-              LinkedIn
+              <LinkedinIcon className="text-cyan-400 shrink-0" />
+              {linkedinHandle}
             </a>
             <a
               href={profile.github}
@@ -65,13 +69,9 @@ export default function Contact() {
               rel="noreferrer"
               className="flex items-center gap-3 text-slate-300 hover:text-cyan-300 transition-colors"
             >
-              <span className="text-cyan-400">gh</span>
-              github.com/RobertMar77
+              <GithubIcon className="text-cyan-400 shrink-0" />
+              {githubHandle}
             </a>
-            <div className="flex items-center gap-3 text-slate-500">
-              <span className="text-cyan-400">☏</span>
-              {profile.phone}
-            </div>
           </div>
           {DEMO_MODE && (
             <div className="rounded-xl border border-amber-400/30 bg-amber-400/5 p-4 text-xs text-amber-200/90">

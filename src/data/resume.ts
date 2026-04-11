@@ -6,8 +6,7 @@ export const profile = {
   title: "Software Developer",
   tagline: "Full-stack engineer building reliable web apps with Java, TypeScript, and the cloud.",
   location: "Rochester, WA",
-  email: "77martirl@gmail.com",
-  phone: "(360) 338-2008",
+  email: "21martir.new@gmail.com",
   github: "https://github.com/RobertMar77",
   linkedin: "https://www.linkedin.com/in/robert-marti-6878b9297",
   resumePdf: "/resume.pdf",
@@ -46,13 +45,12 @@ export const education: EducationEntry[] = [
     gpa: "3.76",
   },
   {
-    // TODO: replace with actual high school name + details
-    school: "High School Name",
-    location: "Rochester, WA",
+    // TODO: verify exact attendance dates; add honors, clubs, AP courses, or sports if desired
+    school: "Tenino High School",
+    location: "Tenino, WA",
     dates: "2017 – 2021",
     level: "high-school",
     degrees: ["High School Diploma"],
-    notes: ["TODO: add honors, clubs, AP courses, or sports here"],
   },
 ];
 
@@ -225,6 +223,30 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "this-portfolio",
+    name: "This Portfolio",
+    date: "Apr 2026",
+    summary:
+      "The site you're on — built from scratch with React, TypeScript, Vite, and Tailwind CSS.",
+    description: [
+      "Designed and built a responsive dark-themed developer portfolio with a multi-section scrolling layout (hero, about, education, skills, experience, projects, awards, contact) and a dedicated resume viewer page.",
+      "Structured with a typed API client layer so backend features (contact form, guestbook, analytics) can be plugged in later without rewriting UI code — currently runs in demo mode with zero backend cost.",
+      "Configured SPA routing with React Router and a custom vercel.json to handle direct route visits correctly; deployed on Vercel with automatic GitHub-driven builds.",
+    ],
+    tech: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Vercel",
+    ],
+    links: [
+      { label: "Live", href: "https://robertmarti.vercel.app" },
+      { label: "GitHub", href: "https://github.com/RobertMar77/portfolio" },
+    ],
+  },
   {
     id: "zenith-racers",
     name: "Zenith Racers",

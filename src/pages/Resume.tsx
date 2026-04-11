@@ -57,7 +57,6 @@ export default function Resume() {
               >
                 ✉ {profile.email}
               </a>
-              <span>☏ {profile.phone}</span>
               <a
                 href={profile.github}
                 target="_blank"
