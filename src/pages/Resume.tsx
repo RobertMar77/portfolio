@@ -1,4 +1,8 @@
 import { profile, skillGroups, experience, education, projects, awards } from "../data/resume";
+import { GithubIcon, LinkedinIcon, MailIcon } from "../components/Icons";
+
+const linkedinHandle = profile.linkedin.replace(/^https?:\/\/(www\.)?/, "");
+const githubHandle = profile.github.replace(/^https?:\/\/(www\.)?/, "");
 
 export default function Resume() {
   return (
@@ -53,25 +57,28 @@ export default function Resume() {
             <div className="glass rounded-2xl p-6 grid sm:grid-cols-2 gap-3 text-sm text-slate-300">
               <a
                 href={`mailto:${profile.email}`}
-                className="hover:text-cyan-300 transition-colors"
+                className="flex items-center gap-2 hover:text-cyan-300 transition-colors break-all"
               >
-                ✉ {profile.email}
+                <MailIcon className="text-cyan-400 shrink-0" />
+                {profile.email}
               </a>
               <a
                 href={profile.github}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-cyan-300 transition-colors"
+                className="flex items-center gap-2 hover:text-cyan-300 transition-colors break-all"
               >
-                gh github.com/RobertMar77
+                <GithubIcon className="text-cyan-400 shrink-0" />
+                {githubHandle}
               </a>
               <a
                 href={profile.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-cyan-300 transition-colors"
+                className="flex items-center gap-2 hover:text-cyan-300 transition-colors break-all"
               >
-                in LinkedIn
+                <LinkedinIcon className="text-cyan-400 shrink-0" />
+                {linkedinHandle}
               </a>
             </div>
           </section>
