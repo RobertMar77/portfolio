@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { profile } from "../data/resume";
 
+// Build the href for a section anchor so it works from any page:
+// on home use `#id` for in-page scroll, elsewhere use `/#id` to nav back + scroll.
+const sectionHref = (id: string, onHome: boolean) =>
+  onHome ? `#${id}` : `/#${id}`;
+
 const sections = [
   { id: "about", label: "About" },
   { id: "education", label: "Education" },
@@ -46,21 +51,15 @@ export default function Nav() {
         </Link>
 
         <div className="hidden md:flex items-center gap-7 text-sm">
-          {onHome
-            ? sections.map((s) => (
-                <a
-                  key={s.id}
-                  href={`#${s.id}`}
-                  className="text-slate-400 hover:text-cyan-300 transition-colors"
-                >
-                  {s.label}
-                </a>
-              ))
-            : (
-              <Link to="/" className="text-slate-400 hover:text-cyan-300 transition-colors">
-                Home
-              </Link>
-            )}
+          {sections.map((s) => (
+            <a
+              key={s.id}
+              href={sectionHref(s.id, onHome)}
+              className="text-slate-400 hover:text-cyan-300 transition-colors"
+            >
+              {s.label}
+            </a>
+          ))}
           <NavLink
             to="/resume"
             className={({ isActive }) =>
@@ -97,22 +96,16 @@ export default function Nav() {
       {open && (
         <div className="md:hidden border-t border-slate-800 bg-[#030712]/95 backdrop-blur-lg">
           <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-3 text-sm">
-            {onHome &&
-              sections.map((s) => (
-                <a
-                  key={s.id}
-                  href={`#${s.id}`}
-                  onClick={() => setOpen(false)}
-                  className="text-slate-300 hover:text-cyan-300"
-                >
-                  {s.label}
-                </a>
-              ))}
-            {!onHome && (
-              <Link to="/" className="text-slate-300 hover:text-cyan-300">
-                Home
-              </Link>
-            )}
+            {sections.map((s) => (
+              <a
+                key={s.id}
+                href={sectionHref(s.id, onHome)}
+                onClick={() => setOpen(false)}
+                className="text-slate-300 hover:text-cyan-300"
+              >
+                {s.label}
+              </a>
+            ))}
             <Link to="/resume" className="text-slate-300 hover:text-cyan-300">
               Resume
             </Link>
