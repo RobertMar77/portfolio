@@ -73,32 +73,30 @@ export default function Hero() {
         </div>
 
         <div
-          className="mt-14 flex items-center gap-5 text-sm text-slate-500 animate-fade-up"
+          className="mt-14 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-x-5 sm:gap-y-2 text-sm text-slate-500 animate-fade-up"
           style={{ animationDelay: "320ms" }}
         >
           <a
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors"
+            className="flex items-center gap-2 hover:text-cyan-300 transition-colors"
           >
             <GithubIcon className="shrink-0" width={14} height={14} />
             {githubHandle}
           </a>
-          <span className="h-4 w-px bg-slate-700" />
           <a
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors break-all"
+            className="flex items-center gap-2 hover:text-cyan-300 transition-colors break-all"
           >
             <LinkedinIcon className="shrink-0" width={14} height={14} />
             {linkedinHandle}
           </a>
-          <span className="h-4 w-px bg-slate-700" />
           <a
             href={`mailto:${profile.email}`}
-            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors"
+            className="flex items-center gap-2 hover:text-cyan-300 transition-colors break-all"
           >
             <MailIcon className="shrink-0" width={14} height={14} />
             {profile.email}
