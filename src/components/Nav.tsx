@@ -13,7 +13,7 @@ const sections = [
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "awards", label: "Awards" },
+  // { id: "awards", label: "Awards" }, // uncomment when Awards section is re-added to Home
   { id: "contact", label: "Contact" },
 ];
 

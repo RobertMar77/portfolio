@@ -38,8 +38,9 @@ export default function Contact() {
     }
   }
 
+  // eyebrow was "07 — Say Hi"; change back to 07 when Awards is re-added
   return (
-    <Section id="contact" eyebrow="07 — Say Hi" title="Get in Touch">
+    <Section id="contact" eyebrow="06 — Say Hi" title="Get in Touch">
       <div className="grid md:grid-cols-[1fr_1.2fr] gap-8">
         <div className="space-y-5">
           <p className="text-slate-300 leading-relaxed">
