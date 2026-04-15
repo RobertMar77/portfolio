@@ -45,12 +45,14 @@ export const education: EducationEntry[] = [
     gpa: "3.76",
   },
   {
-    // TODO: verify exact attendance dates; add honors, clubs, AP courses, or sports if desired
+    // TODO: verify exact attendance dates; add clubs, AP courses, or sports if desired
     school: "Tenino High School",
     location: "Tenino, WA",
     dates: "2017 – 2021",
     level: "high-school",
     degrees: ["High School Diploma"],
+    gpa: "3.98 (1 A-)",
+    notes: ["Valedictorian"],
   },
 ];
 
@@ -107,17 +109,19 @@ export const skillGroups: SkillGroup[] = [
       "R",
       "Haskell",
       "Ruby",
+      "JSON",
       "Bash",
+      "Scratch",
     ],
   },
   {
     label: "Frameworks & Libraries",
-    items: ["Micronaut", "React", "Node.js", "Flask", ".NET", "TailwindCSS", "Headless UI", "Gradle"],
+    items: ["Micronaut", "React", "Node.js", "Flask", ".NET", "TailwindCSS", "Headless UI", "Gradle", "Redis"],
   },
   {
     label: "Cloud & DevOps",
     items: [
-      "AWS (Cognito, ECR, ECS, EC2, S3, IAM, CloudFront)",
+      "AWS (Cognito, ECR, ECS, EC2, S3, IAM, Jumpbox, CloudFront)",
       "Google Cloud Platform",
       "Docker",
       "GitHub Actions (CI/CD)",
@@ -136,6 +140,7 @@ export const skillGroups: SkillGroup[] = [
       "Linux",
       "Windows",
       "IntelliJ IDEA",
+      "JetBrains IDEs",
       "Visual Studio",
       "PyCharm",
       "Eclipse",
@@ -147,7 +152,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     label: "Collaboration",
-    items: ["Git", "GitHub", "Agile / Scrum"],
+    items: ["Git", "GitHub", "GitLab", "Agile / Scrum"],
   },
 ];
 

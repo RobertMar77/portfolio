@@ -38,7 +38,7 @@ export default function About() {
               <dt className="text-xs uppercase tracking-wider text-cyan-300/80">
                 Open To
               </dt>
-              <dd className="text-slate-200 mt-0.5">Junior / mid software roles</dd>
+              <dd className="text-slate-200 mt-0.5">Entry / junior / mid software roles</dd>
             </div>
           </dl>
         </aside>

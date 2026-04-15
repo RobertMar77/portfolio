@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { profile } from "../data/resume";
 
 export default function Resume() {
@@ -43,14 +42,6 @@ export default function Resume() {
             className="w-full h-[85vh] bg-slate-950"
           />
         </div>
-
-        <p className="mt-8 text-sm text-slate-500">
-          Looking for the full portfolio?{" "}
-          <Link to="/" className="text-cyan-300 hover:text-cyan-200 transition-colors">
-            Head back to the home page
-          </Link>
-          .
-        </p>
       </div>
     </main>
   );

@@ -44,8 +44,9 @@ export default function Contact() {
       <div className="grid md:grid-cols-[1fr_1.2fr] gap-8">
         <div className="space-y-5">
           <p className="text-slate-300 leading-relaxed">
-            Open to junior and mid-level software roles — full-stack, backend, or
-            frontend. The fastest way to reach me is email or LinkedIn.
+            Open to entry, junior, and mid-level software roles — full-stack,
+            backend, or frontend. The fastest way to reach me is email or
+            LinkedIn.
           </p>
           <div className="space-y-3 text-sm">
             <a
