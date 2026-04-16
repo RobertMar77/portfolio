@@ -20,7 +20,7 @@ export default function About() {
               <dt className="text-xs uppercase tracking-wider text-cyan-300/80">
                 Current Role
               </dt>
-              <dd className="text-slate-200 mt-0.5">Junior Software Developer @ Humungus</dd>
+              <dd className="text-slate-200 mt-0.5">Software Developer @ Humungus</dd>
             </div>
             <div>
               <dt className="text-xs uppercase tracking-wider text-cyan-300/80">

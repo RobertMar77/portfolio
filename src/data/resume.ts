@@ -16,7 +16,7 @@ export const about = {
   short:
     "I'm a software developer with a BS in Computer Science and a BS in Mathematics Education from Pacific Lutheran University. I work full-stack — from Java + Micronaut backends with SQL and OAuth2 auth, to React + TypeScript + TailwindCSS frontends with complex state and filtering.",
   long: [
-    "I graduated from Pacific Lutheran University in May 2025 with two Bachelor of Science degrees — Computer Science and Mathematics Education — with a 3.76 GPA. Since June 2025 I've been a Junior Software Developer working remotely, contributing to full-stack features, CI/CD reliability, and AWS infrastructure.",
+    "I graduated from Pacific Lutheran University in May 2025 with two Bachelor of Science degrees — Computer Science and Mathematics Education — with a 3.76 GPA. Since June 2025 I've been a Software Developer working remotely, contributing to full-stack features, CI/CD reliability, and AWS infrastructure.",
     "My day-to-day is Java + Micronaut on the backend (SQL, RESTful APIs, session-based and OAuth2 auth with Google and AWS Cognito) and React + TypeScript + TailwindCSS on the frontend (advanced table filtering, complex state with hooks and context, reusable components).",
     "Outside of work I've built a Unity racing game (Zenith Racers), a client/server game with REST APIs and Docker (Star Battles), and a full-stack Lego catalog site with Flask and PostgreSQL. I enjoy shipping things end-to-end.",
   ],
@@ -51,7 +51,7 @@ export const education: EducationEntry[] = [
     dates: "2017 – 2021",
     level: "high-school",
     degrees: ["High School Diploma"],
-    gpa: "3.98 (1 A-)",
+    gpa: "3.98",
     notes: ["Valedictorian"],
   },
 ];
@@ -168,7 +168,7 @@ export type ExperienceEntry = {
 export const experience: ExperienceEntry[] = [
   {
     company: "Humungus",
-    role: "Junior Software Developer",
+    role: "Software Developer",
     location: "Remote, USA",
     dates: "June 2025 – Present",
     tech: true,
@@ -269,9 +269,9 @@ export const projects: Project[] = [
     id: "star-battles",
     name: "Star Battles",
     date: "Dec 2023",
-    summary: "Client/server game with a REST API, Dockerized database, and clean UI/logic separation.",
+    summary: "2D client/server game with a REST API, Dockerized database, and clean UI/logic separation.",
     description: [
-      "Built a game with separate client and server codebases, modeled after real app development.",
+      "Built a 2D game with separate client and server codebases, modeled after real app development.",
       "Client makes REST API calls to retrieve game data from a Docker-hosted database.",
       "Over a dozen classes wired from frontend to backend using a clear logic hierarchy and separation of concerns.",
     ],
@@ -284,6 +284,7 @@ export const projects: Project[] = [
     date: "Dec 2022",
     summary: "Full-stack Lego catalog with a searchable database-backed frontend.",
     description: [
+      "This was only my second website ever — it's rough around the edges, but I'm proud of it as a starting point.",
       "Built an HTML site that queries a PostgreSQL database running in Docker to populate a searchable Lego catalog.",
       "Used Flask to bridge the frontend and database with parameterized SQL queries.",
     ],
